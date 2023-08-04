@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (typeof title !== "undefined") { %>
+        <title><%= title %></title>
+        <%}%>
+        <!-- this makes it so pages like the error page will still be able to use the header, bc they don't have a title. so this will only render/ask for the title if there is one. if it always asked for the title, the error page wouldn't work -->
+    <!-- could include CDN links to css framework -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+                        <!-- don't forget the / before stylesheets so multiple pages can reference it -->
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/skills">All Skills</a>
+        <a href="/skills/new">Suggest a Skill</a>
+    </nav>
