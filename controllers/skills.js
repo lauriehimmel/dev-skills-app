@@ -21,8 +21,8 @@ function getAll(req,res) {
 }
 
 function getOne(req,res) {
-    const clickedSkill = req.params.ability
-    
+    const clickedSkill = req.params.id
+    console.log('reqqqqq', Skill.getOne(clickedSkill))
     const contextObject = {
         title: 'A Skill',
         skillName: Skill.getOne(clickedSkill)
@@ -40,20 +40,29 @@ function createSkill(req,res) {
 }
 
 function deleteSkill(req,res) {
-    const toDelete = req.params.ability
+    const toDelete = req.params.id
     Skill.deleteSkill(toDelete);
     res.redirect('/skills');
 }
 
 function edit(req, res) {
-    const updateAbil = req.params.ability;
-    res.render("skills/edit", { title: "Edit Skills", skill: Skill.getOne(updateAbil) });
+    const updateId = req.params.id;
+    res.render("skills/edit", { title: "Edit Skills", skill: Skill.getOne(updateId) });
   }
 
 function updateSkill(req, res) {
-    const clickedSkill = req.params.ability
-    req.body.ability = clickedSkill
-    console.log('hi', clickedSkill)
-    Skill.updateSkill(clickedSkill, req.body)
-    res.redirect(`/skills/${clickedSkill}`)
+    // const clickedSkill = req.params.ability
+    // console.log('reqparamsskill', clickedSkill)
+    // req.body.ability = clickedSkill
+    // console.log('dddata', req.body, 'data passed to update')
+    // Skill.updateSkill(clickedSkill, req.body)
+    // res.redirect(`/skills/${clickedSkill}`)
+
+
+    const id = Number(req.params.id)
+    console.log('reqparamsid', id)
+    // req.body.ability = id 
+    console.log('dddata', req.body, 'data passed to update')
+    Skill.updateSkill(id, req.body)
+    res.redirect(`/skills/${id}`) 
 }

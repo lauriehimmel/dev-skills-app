@@ -7,6 +7,10 @@ a {
   color: #00B7FF;
 }
 
+h1 {
+  font-family: 'Abril Fatface', cursive;
+}
+
 .delete-form {
   display: inline-block;
   margin-right: 10px;
@@ -18,4 +22,9 @@ a {
 	
 li {
   list-style: none;
+}
+
+
+.nav-item :active {
+  background-color: purple;
 }
