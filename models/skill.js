@@ -1,12 +1,12 @@
 const skills = [
-    {id: 1, ability: 'forking', category: 'Git', learned: false},
-    {id: 2, ability: 'pull requests', category: 'Git', learned: false},
-    {id: 3, ability: 'arrays', category: 'JS', learned: true},
-    {id: 4, ability: 'creating objects', category: 'JS', learned: false},
-    {id: 5, ability: 'semantic tags', category: 'HTML', learned: false},
-    {id: 6, ability: 'attributes', category: 'HTML', learned: false},
-    {id: 7, ability: 'flexbox', category: 'CSS', learned: false},
-    {id: 8, ability: 'CSS grid', category: 'CSS', learned: false}
+    {id: 1, ability: 'Forking', category: 'Git', learned: false, info: ' creates a new repository that shares code and visibility settings with the original “upstream” repository. Forks are often used to iterate on ideas or changes before they are proposed back to the upstream repository, such as in open source projects or when a user does not have write access to the upstream repository.'},
+    {id: 2, ability: 'Pull Requests', category: 'Git', learned: false, info: ' let you tell others about changes you\'ve pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.'},
+    {id: 3, ability: 'Arrays', category: 'JS', learned: true, info: ' are objects that enable the storing of a collection of multiple items under a single variable name.'},
+    {id: 4, ability: 'Objects', category: 'JS', learned: false, info: ' are king, according to W3 schools. As they say, if you understand objects, you understand JavaScript.'},
+    {id: 5, ability: 'Semantic Tags', category: 'HTML', learned: false, info: ' clearly describe their meaning to both the browser and the developer. Non-semantic tags include <div> and <span>, while semantic tags include tags such as <form>, <footer>, <article>'},
+    {id: 6, ability: 'Attributes', category: 'HTML', learned: false, info: ' provide additional information about HTML elements. Href and src are both examples of HTML attributes.'},
+    {id: 7, ability: 'Flexbox', category: 'CSS', learned: false, info: '  aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”)'},
+    {id: 8, ability: 'CSS Grid', category: 'CSS', learned: false, info: ' is a two-dimensional grid-based layout system that, compared to any web layout system of the past, completely changes the way we design user interfaces. '}
   ]
   
   module.exports = {
@@ -29,6 +29,7 @@ const skills = [
   function createSkill(data) {
     const newSkill = {...data}
     newSkill.learned = data.learned 
+    newSkill.id = Date.now() % 1000000
     skills.push(newSkill);
   }
   

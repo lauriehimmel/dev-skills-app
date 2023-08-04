@@ -1,8 +1,8 @@
 <%- include('../partials/header') %> 
 
-    <h1>Skill Show</h1>
+    <h1>Skill: <%= skillName.ability %></h1>
    
-    <p>Skill: <%= skillName.ability %> - <a href="/skills/<%=skillName.id%>/edit">Edit</a></p>
-    <%= skillName.learned ? 'learned, baby' : 'ya gotta learn it!' %>
-
+    <p><a href="/skills/<%=skillName.id%>/edit">Edit skill name & status</a></p>
+    <p><strong><%= skillName.ability %></strong></b><%=skillName.info%></p>
+    <p><strong>STATUS: </strong><%= skillName.learned ? 'Learned. Good work!' : 'Not learned. Uh oh, get learning!' %></p>
  <%- include('../partials/footer') %>

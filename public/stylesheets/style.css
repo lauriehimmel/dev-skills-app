@@ -9,6 +9,7 @@ a {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
+  padding: 20px 0 20px 0;
 }
 
 .delete-form {
@@ -24,7 +25,16 @@ li {
   list-style: none;
 }
 
+/* .container-fluid {
+  background-color: purple;
+} */
 
 .nav-item :active {
   background-color: purple;
 }
+
+footer {
+  padding-top: 20px;
+  color: #616262;
+}
+
